@@ -1,2 +1,15 @@
 .DS_Store
 .env
+infra/terraform.tfvars
+
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+__pycache__/
+*.pyc
+*.pyo
+
+infra/*.zip
+api/*/package/
