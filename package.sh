@@ -20,8 +20,7 @@ for fn in eligibility search; do
     pip install -r "$FN_DIR/requirements.txt" -t "$PKG_DIR"
   fi
 
-  # Copy handler code
-  cp "$FN_DIR/handler.py" "$PKG_DIR/"
+  cp "$FN_DIR"/*.py "$PKG_DIR/"
 
   # Zip everything
   ZIP_PATH="$(pwd)/$OUTPUT_DIR/$fn.zip"
