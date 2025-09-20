@@ -7,7 +7,7 @@ This document explains how to access the Freight Broker API and how to reproduce
 Clone the repository and build the Docker image:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/vpossobom/freight-broker.git
 cd freight-broker
 docker build -t freight-broker .
 ```
@@ -26,7 +26,7 @@ docker run --rm -it \
   -e AWS_ACCESS_KEY_ID=<your-access-key> \
   -e AWS_SECRET_ACCESS_KEY=<your-secret-key> \
   -e AWS_DEFAULT_REGION=us-east-1 \
-  -v $(pwd)/infra:/workspace/infra \
+  -v $(pwd):/app \
   freight-broker
 ```
 
@@ -183,7 +183,7 @@ docker run --rm -it \
   -e AWS_ACCESS_KEY_ID=<your-access-key> \
   -e AWS_SECRET_ACCESS_KEY=<your-secret-key> \
   -e AWS_DEFAULT_REGION=us-east-1 \
-  -v $(pwd)/infra:/workspace/infra \
+  -v $(pwd):/app \
   freight-broker
 ```
 
