@@ -43,15 +43,15 @@ def lambda_handler(event, context):
     # Build base query
     query = {}
     if equipment:
-        query["equipment_type"] = equipment
+        query["equipment_type"] = equipment.lower()
     if weight:
         query["weight"] = {"$lte": int(weight)}
     if origin:
-        query["origin"] = origin
+        query["origin"] = origin.lower()
     if destination:
-        query["destination"] = destination
+        query["destination"] = destination.lower()
     if commodity:
-        query["commodity_type"] = commodity
+        query["commodity_type"] = commodity.lower()
 
     if pickup_after:
         pickup_after_clean = pickup_after.strip('"\'')

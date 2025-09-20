@@ -26,7 +26,7 @@ docker run --rm -it \
   -e AWS_ACCESS_KEY_ID=<your-access-key> \
   -e AWS_SECRET_ACCESS_KEY=<your-secret-key> \
   -e AWS_DEFAULT_REGION=us-east-1 \
-  -v $(pwd)/infra:/workspace/infra \
+  -v $(pwd):/app \
   freight-broker
 ```
 
